@@ -221,7 +221,7 @@ terraform import azurerm_virtual_machine_extension.ad_setup \
   /subscriptions/<subscription-id>/resourceGroups/rg-ad-shirley/providers/Microsoft.Compute/virtualMachines/vm-ad-shirley/extensions/install-ad-ds
 ```
 
-A follow-up `terraform plan` confirmed that Terraform no longer tried to recreate the extension.
+A follow-up terraform plan confirmed that Terraform no longer attempted to recreate the extension. The remaining plan differences were in-place configuration/state drift rather than resource recreation, so I did not apply them to the verified working Domain Controller.
 
 This showed why it matters to validate Azure resource state independently, and how to reconcile Terraform state after an interrupted provisioning operation.
 
