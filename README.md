@@ -91,7 +91,7 @@ This approach shows how infrastructure automation helps IT and cloud teams:
 
 **How it fits together:**
 
-- **Network boundary:** a single VNet (`10.0.0.0/16`) with one subnet (`10.0.1.0/24`). The DC's NIC has a **static private IP (`10.0.1.4`)**. A Domain Controller is also the domain's DNS server, so its address must never change.
+- **Network boundary:** a single VNet (`10.0.0.0/16`) with one subnet (`10.0.1.0/24`). The DC's NIC has a **static private IP (`10.0.1.4`)**. The Domain Controller also hosts DNS in this deployment, so a static private IP provides a stable address for domain and DNS services.
 - **Ingress:** a Standard-SKU static public IP, with an NSG attached to the NIC that allows inbound RDP on TCP 3389.
 - **Compute:** a Windows Server 2022 Datacenter **Gen 2** VM (`Standard_D2ls_v7`) on a 127 GB Premium SSD OS disk.
 - **Configuration:** the `install-ad-ds` Custom Script Extension runs a single PowerShell command. It installs AD DS with the management tools, creates the forest, installs DNS and sets the DSRM password.
