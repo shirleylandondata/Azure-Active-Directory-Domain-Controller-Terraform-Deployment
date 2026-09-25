@@ -8,7 +8,7 @@
 
 > **Automated Azure infrastructure deployment for a Windows Server 2022 Active Directory Domain Controller using Terraform.**
 
-This project deploys Azure networking, compute and identity infrastructure with Infrastructure as Code. Terraform provisions the Azure environment. An Azure Custom Script Extension then installs Active Directory Domain Services (AD DS), configures DNS and promotes the Windows Server VM to the first Domain Controller of the `corp.shirley.com` forest.
+## This project deploys Azure networking, compute and identity infrastructure with Infrastructure as Code. Terraform provisions the Azure environment. An Azure Custom Script Extension then installs Active Directory Domain Services (AD DS), configures DNS and promotes the Windows Server VM to the first Domain Controller of the `corp.shirley.com` forest.
 
 ---
 
